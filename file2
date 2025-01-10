@@ -1,1 +1,320 @@
-This is file2
+// Java Program to Swap Two values using third variable
+// using temp variable 
+
+// Importing generic libraries
+import java.util.*;
+
+class GFG {
+
+    // Function to swap two numbers
+    // Using temporary variable
+    static void swapValuesUsingThirdVariable(int m, int n)
+    {
+        // Swapping the values
+        int temp = m;
+        m = n;
+        n = temp;
+        System.out.println("Value of m is " + m
+                           + " and Value of n is " + n);
+    }
+
+    // Main driver code
+    public static void main(String[] args)
+    {
+        // Random integer values
+        int m = 9, n = 5;
+
+        // Calling above function to
+        // reverse the numbers
+        swapValuesUsingThirdVariable(m, n);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+yum  update
+sudo yum install git -y
+sudo yum install java-17-amazon-corretto-devel
+vi .bashrc
+export JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto
+source .bashrc
+sudo su 
+cd /opt
+wget  https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.91/bin/apache-tomcat-9.0.91.tar.gz
+tar -xvzf apache-tomcat-9.0.01.tar.az
+mv apache-tomcat-9.0.01  tomcat
+ln -s /opt/tomcat/bin/startup.sh /usr/bin/tomcat-start
+ln -s /opt/tomcat/bin/shutdown.sh /usr/bin/tomcat-stop
+find / -name context.xml
+valve in comments
+In conf
+/tocat-users.xml
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>
+<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+<user username="deployer" password="deployer" roles="manager-script"/>
+<user username="tomcat" password="s3cret" roles="manager-gui"/>
+
+sudo su
+wget https://dlcdn.apache.org/maven/maven-3/3.9.8/binaries/apache-maven-3.9.8-bin.tar.gz
+tar -zxvf apache-maven-3.9.8-bin.tar.gz
+mv apache-maven-3.9.8 maven
+
+check maven version /opt/maven/bin/mvn -v
+
+In .bashrc of ec2-user and root
+
+export M2_HOME=/opt/maven
+export M2=/opt/maven/bin
+export PATH=$PATH:$M2
+
+source .bashrc
+
+create a application directory
+
+mvn archetype:generate -DgroupId=com.example -DartifactId=sample-webapp -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+cd sample-webapp
+mvn package
+sudo su
+cd target/
+cp sample-webapp.war /opt/tomcat/webapps
+
+Test it from http://<publicip>:8080/sample-webapp
+
+a.	sudo su  
+b.	wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+c.	rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+d.	sudo yum upgrade
+e.	yum install jenkins -y
+f.	systemctl enable jenkins
+g.service jenkins status
+service jenkins start
